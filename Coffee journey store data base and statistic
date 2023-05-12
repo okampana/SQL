@@ -1,0 +1,25 @@
+--Create coffee journey database
+CREATE TABLE coffeejourney (id INTEGER PRIMARY KEY, PRODUCT TEXT, CATEGORY TEXT, PRICE INTEGER, TIME INTEGER);
+
+INSERT INTO coffeejourney VALUES (1, "americano", "coffee",45,3);
+INSERT INTO coffeejourney VALUES (2, "latte", "coffee",55,4);
+INSERT INTO coffeejourney VALUES (3, "espresso", "coffee",35,1);
+INSERT INTO coffeejourney VALUES (4, "moccha", "coffee",65,5);
+INSERT INTO coffeejourney VALUES (5, "cappucino", "coffee",55,5);
+INSERT INTO coffeejourney VALUES (6, "CJ", "coffee",75,3);
+INSERT INTO coffeejourney VALUES (7, "thai tea", "tea",45,3);
+INSERT INTO coffeejourney VALUES (8, "greentea", "tea",55,4);
+INSERT INTO coffeejourney VALUES (9, "milk tea", "tea",50,3);
+INSERT INTO coffeejourney VALUES (10, "chocolate", "refeshment",60,7);
+INSERT INTO coffeejourney VALUES (11, "chai tea", "tea",60,5);
+INSERT INTO coffeejourney VALUES (12, "milk", "refeshment",35,2);
+INSERT INTO coffeejourney VALUES (13, "lime tea", "tea",45,3);
+INSERT INTO coffeejourney VALUES (14, "plum soda", "refeshment",55,3);
+INSERT INTO coffeejourney VALUES (15, "coke", "refeshment",15,1);
+
+--Display database order by price
+SELECT * FROM coffeejourney ORDER BY price;
+
+--what is the sum of all drinks for each category?
+SELECT CATEGORY, SUM(PRICE) FROM coffeejourney;
+
